@@ -10,7 +10,7 @@ import random
 from annotated_text import annotated_text
 
 
-def page_leaves_visualizer_body():
+def page_cherry_leaves_visualizer_body():
 
     st.title("🍒 Cherry Leaves Visualizer 🍒")
 
