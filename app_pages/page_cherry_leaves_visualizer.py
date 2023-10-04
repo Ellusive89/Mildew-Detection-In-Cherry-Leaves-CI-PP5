@@ -7,16 +7,15 @@ import matplotlib.pyplot as plt
 from matplotlib.image import imread
 import itertools
 import random
-from annotated_text import annotated_text
 
 
 def page_cherry_leaves_visualizer_body():
 
-    st.title("🍒 Cherry Leaves Visualizer 🍒")
+    st.header("🍒 Cherry Leaves Visualizer 🍒")
 
-    annotated_text(
-        "This page visually contrasts ("healthy") Cherry Leaves "
-        "with those infected by ("powdery mildew")."
+    st.warning(
+        "This page visually contrasts **healthy** Cherry Leaves "
+        "with those infected by **powdery mildew**."
     )
     version = 'v1'
     if st.checkbox("Comparison of average vs. variability imagery."):
@@ -29,7 +28,8 @@ def page_cherry_leaves_visualizer_body():
             f" Infected leaves, in both average and variability images, "
             f" exhibit more white blotches on their surface. "
             f" In contrast, healthy leaves display a more uniform green shade. "
-            f" However, these images don't offer any intuitive patterns to easily distinguish between the two."
+            f" However, these images don't offer any intuitive patterns "
+            f"to easily distinguish between the two."
         )
         st.image(avg_var_healty, caption='Healty leaves - Avegare and Variability')
         st.image(avg_var_powdery_mildew,
@@ -39,25 +39,31 @@ def page_cherry_leaves_visualizer_body():
     if st.checkbox("Comparisons of average healthy leaves versus infected ones."):
         diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
         st.success(
-            f"We observe a comparable pattern where the healthy leaves present a clearer, greener  "
-            f"appearance, while the infected leaves exhibit more white coloring on their surface. "
+            f"We observe a comparable pattern where the healthy leaves "
+            f"present a clearer, greener  "
+            f"appearance, while the infected leaves exhibit more white "
+            f"coloring on their surface. "
             f"However, contrasting the two types of leaves remains challenging. "
         )
 
         st.image(diff_between_avgs, caption='Discrepancy among typical images.')
 
     if st.checkbox("Image Montage"):
-        annotated_text(
-            "To generate and update the montage, press the ("Generate Montage") button")
+        st.success(
+            f"To generate and update the montage, "
+            f"press the **Generate Montage** button")
         st.info(
-            f"The montage assists in visually distinguishing between a healthy leaf and a diseased one. "
-            f"The latter displays white, powdery marks or areas on the upper surface of the leaves. "
-        )
+            f"The montage assists in visually distinguishing between "
+            f"a healthy leaf and a diseased one.")
+        st.error(
+            f"Leaves infected with powdery mildew exhibit white, "
+            f"powdery patches on their upper surfaces.")
+
         my_data_dir = 'inputs/cherry_leaves_dataset/cherry-leaves'
         labels = os.listdir(my_data_dir + '/validation')
         label_to_display = st.selectbox(
             label="Select label:", options=labels, index=0)
-        if st.button("Generate Montage"):
+        if st.button("👉 Generate Montage 👈"):
             image_montage(dir_path=my_data_dir + '/validation',
                           label_to_display=label_to_display,
                           nrows=8, ncols=3, figsize=(10, 25))
