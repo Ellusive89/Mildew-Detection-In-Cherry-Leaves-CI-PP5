@@ -10,6 +10,8 @@ def page_ml_performance_metrics():
 
     st.header("💻 Machine Learning Performance Indicators 💻")
 
+    st.write("---")
+
     st.subheader(
         "📊 Breakdown of Label Frequencies in Train, Validation, and Test Data 📊")
 
