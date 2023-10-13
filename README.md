@@ -1,7 +1,8 @@
 # Powdery Mildew Detection In Cherry Leaves
-The Powdery Mildew Detector is an application capable of determining the health status of cherry leaves by identifying if they have powdery mildew. By analyzing an image of a cherry leaf, the app can discern whether the leaf is healthy or affected.
+Predictive Analytics project as a part of the Diploma in Full Stack Software Development from the Code Institute:
+This application stands out as an innovative tool designed to evaluate the health of cherry leaves by detecting the presence of powdery mildew. By processing an image of a cherry leaf, the Powdery Mildew Detector is adept at distinguishing between a healthy leaf and one that's compromised.
 
-This application utilizes a supervised binary classification machine learning model, with the binary classifier being responsible for predicting the results.
+At the heart of this application lies a supervised binary classification machine learning model. This binary classifier is pivotal in making accurate predictions regarding the leaf's health status.
 
 
 ## Dataset Content
@@ -20,11 +21,40 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
+Leaves compromised by powdery mildew manifest distinct attributes that set them apart from their healthy counterparts. Common signs of an infected leaf encompass specific markings and noticeable morphological alterations. For instance, such leaves might appear lighter in shade and have an almost-circular shape. Another less obvious characteristic is the emergence of powdery patches, especially on younger and more vulnerable leaves.
+
+A visual compilation, or Image Montage, can pinpoint a typical leaf affected by powdery mildew, chiefly by identifying the subtle white marks present. Conversely, analyses using Average Image, Variability Image, and the Difference between Averages failed to present a definitive pattern for leaf differentiation.
+
+The machine learning model is engineered to discern between a healthy and a mildew-infected cherry leaf with a precision of at least 97%.
 
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+
+### Business Requirements
+
+* 1 - Visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+* 2 - Predict if a cherry leaf is healthy or contains powdery mildew using a machine learning model.
+
+### Mapping to Data Visualizations
+
+#### Visual Differentiation
+* Image Montage: Using the "Cherry Leaves Visualizer" page, a visual compilation of healthy and infected leaves is provided, serving as a direct visual guide to the prominent characteristics of each type.
+* Average vs. Variability Imagery: This comparison in the Streamlit app offers insights into the visual difference in color consistency between healthy and infected leaves. Infected leaves exhibit more white blotches on their surface, while healthy leaves display a uniform green shade.
+* Difference in Average Imagery: This visualization helps identify discrepancies in the appearance of healthy leaves versus infected ones.
+* Histograms and Distribution Plots: Not explicitly in the Streamlit app, but can be considered for a future enhancement. By plotting histograms for healthy vs. infected leaves, users can visually identify unique patterns or trends that differentiate the two categories.
+
+### Mapping to ML Tasks
+
+#### Prediction
+* Real-time Prediction: The "Powdery Mildew Detector" page provides a real-time prediction feature. Users can upload a cherry leaf image, and the system will return its prediction (healthy or infected). This is a direct application of the binary classification ML model.
+* Model Performance Metrics: The "Machine Learning Performance Indicators" page offers insights into the ML model's performance, including model training accuracy, losses, and generalized outcomes.
+* Model Validation: Ensuring the model's robustness by measuring its performance on validation and test data sets.
+* Performance Metrics: Displayed metrics, such as loss and accuracy, are crucial given the potential commercial implications of misclassification.
+
+### Additional Insights
+Given the severity of powdery mildew's impact, there's also a potential to expand on the economic implications of the disease. Visualizations showing potential revenue loss due to undetected infections could be a compelling addition for stakeholders.
+
+To summarize, the Streamlit application offers a comprehensive suite of tools to both visually understand and predict the presence of powdery mildew in cherry leaves. By mapping these functionalities to the business requirements, the solution not only provides theoretical understanding but also actionable insights and tools for practical application in the cherry farming and distribution industry.
 
 
 ## ML Business Case
@@ -71,6 +101,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 * Heroku: This container-centric cloud service was used for deploying the project,
 
 ### Libraries for Data Analysis and Machine Learning
+
 * Numpy: An open-source Python library designed for array operations. It boasts extensive mathematical functions, random number capabilities, and linear algebra routines,
 * Matplotlib: A cross-platform Python library for visualizing data and creating graphical plots,
 * Seaborn: A Python-based data visualization library built on Matplotlib, primarily used for visualizing random distributions,
