@@ -4,6 +4,8 @@ This application stands out as an innovative tool designed to evaluate the healt
 
 At the heart of this application lies a supervised binary classification machine learning model. This binary classifier is pivotal in making accurate predictions regarding the leaf's health status.
 
+![Mockup](assets/images/Mocup.png)
+
 
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
@@ -58,7 +60,13 @@ To summarize, the Streamlit application offers a comprehensive suite of tools to
 
 
 ## ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+* Using the provided image dataset, our goal is to develop a supervised, single-label, binary classification ML model to determine whether a cherry leaf has powdery mildew.
+* Currently, this disease is detected manually, requiring approximately 30 minutes inspection per tree. This method is not only time-intensive but also lacks scalability.
+* This model aims to offer a quicker and more dependable app for determining if a leaf exhibits powdery spots, indicating the cherry plants are unwell.
+* The model's result is presented as a flag, signaling whether the leaf exhibits any signs of infection. Plantation staff will photograph various tree leaves and upload them to the app, where an instantaneous prediction will be generated.
+* The training data, comprising 4208 images, is available on Kaggle.
+* We aim for a success rate of 97% accuracy or higher on the test set.
+* This initiative will enhance the quality of the company's produce.
 
 
 ## Dashboard Design
@@ -70,12 +78,55 @@ To summarize, the Streamlit application offers a comprehensive suite of tools to
 ![Project_Hypothesis](assets/wireframes/Hypothesis%20and%20Validation.png)
 ![ML_Performance](assets/wireframes/ML%20Performance.png)
 
+### Finished Project
+
+Project dashboard features a side navigation bar that directs to five distinct pages. 
+Here are the details of those pages:
+
+#### Brief Project Summary
+
+![Summary](assets/images/summary.png)
+
+#### Cherry Leaves Visualizer
+
+![Visualiser](assets/images/visualiser.png)
+
+* Comparison of average vs. variability imagery.
+![Comparision](assets/images/comparision.png)
+![Comparision2](assets/images/comparision_2.png)
+* Comparisons of average healthy leaves versus infected ones.
+![Healty_vs_Infected](assets/images/comparisions_healty_infected.png)
+* Image Montage
+![Image_Montage](assets/images/image_montage.png)
+
+#### Powdery Mildew Detector
+
+* Download link for a collection of images depicting healthy and unhealthy leaves for real-time prediction.
+* A user interface featuring a file upload tool. Users are prompted to upload images of leaves. Upon upload, the image will be displayed along with a prediction message, specifying whether the leaf is healthy or unhealthy.
+![Detector](assets/images/mildew_detector.png)
+* A table detailing the image name and the corresponding prediction outcome.
+![Report](assets/images/report_2.png)
+* A button to download the prediction outcome.
+![Report_2](assets/images/report.png)
+
+#### Project-Based Hypothesis and Its Validation
+
+![Hypothesis_and_validation](assets/images/hypotesis.png)
+
+#### Machine Learning Performance
+
+* Label Frequencies for Train, Validation and Test Sets
+![Train,validation](assets/images/train%2C%20validation.png)
+* Model Training Accuracy and Losses
+![Model_History](assets/images/model_history.png)
+Our ML prediction accuracy is 99,29%.
+
 
 ## Deployment
 
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://ml-mildew-detection-pp5-e969717a4d76.herokuapp.com/
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
@@ -121,7 +172,5 @@ To summarize, the Streamlit application offers a comprehensive suite of tools to
 * [Cherry Powdery Mildew](https://ca.decisionaid.systems/articles/cherry_powdery_mildew) for more information about powdery mildew,
 * [Streamlit](https://docs.streamlit.io/library/api-reference/status) for information about Streamlit,
 * CI Slack for trubleshooting,
+* Project on Malaria Analysis from Code Institute: The original code and design were sourced from [CI WalkthroughProject01](https://github.com/Code-Institute-Org/WalkthroughProject01). I adjusted the code provided to suit my app. This project enhanced my comprehension of Machine Learning and Data Analytics, reaffirming my confidence in choosing the right specialization for myself.
 
-
-## Acknowledgements
-* Thank the people that provided support throughout this project.
