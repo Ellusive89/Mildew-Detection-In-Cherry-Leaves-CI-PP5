@@ -54,7 +54,6 @@ threadpoolctl==3.2.0
 toml==0.10.2
 toolz==0.12.0
 tqdm==4.66.1
-typing_extensions==4.8.0
 tzlocal==5.0.1
 validators==0.22.0
 watchdog==3.0.0
