@@ -43,5 +43,3 @@ def page_project_summary_body():
         f"For further details about the project, kindly refer to the "
         f"[README file](https://github.com/Ellusive89/Mildew-Detection-In-Cherry-Leaves-CI-PP5/blob/main/README.md)"
     )
-
-
