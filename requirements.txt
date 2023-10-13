@@ -47,7 +47,6 @@ six==1.15.0
 streamlit==0.85.0
 tensorboard==2.14.0
 tensorboard-data-server==0.7.1
-tensorflow-cpu==2.6.0
 tensorflow-estimator==2.14.0
 termcolor==1.1.0
 text-unidecode==1.3
